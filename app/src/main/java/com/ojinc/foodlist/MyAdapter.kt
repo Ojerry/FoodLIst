@@ -21,6 +21,7 @@ class MyAdapter(private val foodList : ArrayList<Foods>) : RecyclerView.Adapter<
         val currentItem = foodList[position]
         holder.foodImage.setImageResource(currentItem.foodImage)
         holder.tvHeading.text = currentItem.heading
+        holder.tvPrice.text = currentItem.price
     }
 
     override fun getItemCount(): Int {
@@ -30,6 +31,7 @@ class MyAdapter(private val foodList : ArrayList<Foods>) : RecyclerView.Adapter<
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         val foodImage : ShapeableImageView = itemView.findViewById(R.id.food_image)
         val tvHeading : TextView = itemView.findViewById(R.id.tvHeading)
+        val tvPrice : TextView = itemView.findViewById(R.id.tvPrice)
     }
 
 }

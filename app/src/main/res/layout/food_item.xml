@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp">
 
+
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/food_image"
         android:layout_width="80dp"
@@ -21,9 +22,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:id="@+id/tvHeading"
-        android:textColor="@color/black"
         android:text="Egusi soup, as tasty as they come..."
         android:textSize="16dp"
+        android:textColor="?android:textColorPrimary"
         android:textStyle="bold"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="32dp"
@@ -32,14 +33,31 @@
         app:layout_constraintStart_toEndOf="@id/food_image"
         app:layout_constraintTop_toTopOf="parent"/>
 
-        <View
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="N1200"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/food_image"
+        app:layout_constraintTop_toBottomOf="@id/tvHeading" />
+
+    <View
+        android:id="@+id/underline"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_margin="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/food_image"
             android:background="@color/underline"/>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
