@@ -1,3 +1,70 @@
 <resources>
     <string name="app_name">FoodLIst</string>
+
+    <string name="amala">Àmàlà is a local indigenous Yoruba food, native to the Yoruba ethnic group. It is made out of yam and/or cassava flour, or unripe plantain flour.[1] Yams are peeled, sliced, cleaned, dried and then blended into flour, also called èlùbọ́. Yams are white in colour but turn brown when dried. This gives àmàlà its colour.[2][3] Àmàlà is consumed by the Yoruba people in Nigeria. Amala is native to indigenous people of the Southwestern part of Nigeria.[4] It could be served with a variety of ọbẹ (soups), such as ẹ̀fọ́, ilá, ewédú, ogbono, and or gbẹ̀gìrì (black-eyed beans soup).[5][6][7][8]
+Preparation: In preparing Amala, locally you can get enough yam peels, dry them for 3 to 5 days depending on the quantity. Once it gets thickened, the next process is grind. Once its grinded it becomes yam flour (Amala).[27][28] All you need is to prepare the Àmàlà without delay.
+The only ingredient needed when making àmàlà is boiling water and one of the desired types of flour. Once the water has come to a boil, the heat is reduced. The flour is added and stirred until all the water is absorbed. More hot water is added, then the dough is left to simmer for approximately five minutes.[29][30][31] Then the dough is kneaded until it has the desired texture. Kneading the dough into a smooth paste is the most difficult part of preparing àmàlà.[citation needed]</string>
+
+
+    <string name="egusi">Egusi (also known by variations including egwusi, agusi, ohue, Ikpan, agushi) is the name for the protein-rich seeds of certain cucurbitaceous plants (squash, melon, gourd), which after being dried and ground are used as a major ingredient in West African cuisine.[1] Authorities disagree whether the word is used more properly for the seeds of the colocynth, those of a particular large-seeded variety of the watermelon, or generically for those of any cucurbitaceous plant.[2] The characteristics and uses of all these seeds are broadly similar. Major egusi-growing nations include Mali, Burkina Faso, Togo, Ghana, Côte d\'Ivoire, Benin, Nigeria, and Cameroon.[2]Species from which egusi is derived include Cucumeropsis mannii and Citrullus lanatus.[3] Usage Egusi soup is a kind of soup thickened with the ground seeds and popular in West Africa, with considerable local variation.[4] Besides the seeds, water, and oil, egusi soup typically contains leaf vegetables, palm oil, other vegetables, seasonings, and meat. Leaf vegetables typically used for egusi soup include bitterleaf, pumpkin leaf, celosia and spinach. Typical other vegetables include tomatoes and okra. Typical seasonings include chili peppers, onions, and locust beans. Also commonly used are beef, goat, fish, shrimp, or crayfish.
+In Nigeria, egusi is common among the people of the southwestern Yoruba people, Efik, Ibibio and Annang people of south-south Nigeria, and the southeastern part of Nigeria by the Igbo people of southern Nigeria. In Ghana, egusi is also called akatoa or agushi, and as in Nigeria is used for soup and stew,[5] and most popularly in palaver sauce.[6] In the late 1980s, the Government of Canada funded a project intended to develop a machine to help Cameroonians shell egusi seeds.[7] A machine has been developed in Nigeria to shell egusi.[8]
+</string>
+
+
+    <string name="jollof">Jollof (/dʒəˈlɒf/), or jollof rice, is a rice dish from Senegal.[3] The dish is typically made with long-grain rice, tomatoes, onions, spices, vegetables and meat in a single pot, although its ingredients and preparation methods vary across different regions.
+Nigerian jollof
+Although considerable variation exists, the basic profile for Nigerian jollof rice includes long grain parboiled rice, tomatoes and tomato paste, pepper, vegetable oil, onions, and stock cubes. Most of the ingredients are cooked in one pot, of which a rich meat stock and a fried tomato and pepper puree characteristically forms the base. Rice is then added and left to cook in the liquid. The dish is then served with the protein of choice and very often with fried plantains, moi moi, steamed vegetables, coleslaw, salad, etc.[19] In the riverine areas of Nigeria where seafood is the main source of protein, seafood often takes the place of chicken or meat as the protein of choice.[citation needed]</string>
+
+
+
+
+    <string name="ogbono">Ogbono soup, is a Nigerian dish made with ground dry ogbono seeds. Ogbono seeds are originated and were first grown in Southern Nigeria. [1][2][3] (the local name for Irvingia)[4][5] with considerable local variation. According to research by Chris Chinaka and J.C. Obiefuna, Ogbono is an indigenous forest tree associated with plants classified as \'non-timber forest products. It goes by various indigenous names in Nigeria. In the Igbo speaking region it is called ogbono/ugiri depending on the variety of Igbo. In Nupe, it is called \'pekpeara\' , \'ogwi\' in Bini, \'uyo\' in Efik and \'oro\' in Yoruba. [6]The ground ogbono seeds are used as a thickener, and give the soup a black coloration.[4] Besides seeds, water and palm oil, it typically contains meat and/or fish seasonings such as chili pepper,[4] leaf vegetables and other vegetables. Typical leaf vegetables include bitterleaf and celosia. Typical other vegetables include tomatoes and okra. Typical seasonings include chiles, onions, and iru (fermented locust beans).[4] Typical meats include beef, goat, fish,[4] chicken, bush meat, shrimp, or crayfish. It can be eaten with fufu,[4] or with pounded yam. In other countries the soup may be available in packaged prepared form in some markets that specialize in Western African foods.[4] Ogbono soup has a mucilaginous (slimy) texture,[7] similar to okra soup.
+</string>
+
+
+    <string name="salad">A salad is a dish consisting of mixed, mostly natural ingredients with at least one raw ingredient. They are often dressed, and typically served at room temperature or chilled, though some can be served warm. Garden salads use a base of leafy greens such as lettuce, arugula/rocket, kale or spinach; they are common enough that the word salad alone often refers specifically to garden salads. Other types include bean salad, tuna salad, fattoush, Greek salad (vegetable-based, but without leafy greens), and sōmen salad (a noodle-based salad).
+Salads may be served at any point during a meal: Appetizer salads—light, smaller-portion salads served as the first course of the meal
+Side salads—to accompany the main course as a side dish; examples include potato salad and coleslaw Main course salads—usually containing a portion of one or more high-protein foods, such as meat, fish, eggs, legumes, or cheese
+Dessert salads—sweet salads containing fruit, gelatin, sweeteners or whipped cream When a sauce is used to flavor a salad, it is generally called a salad dressing; most salad dressings are based on either a mixture of oil and vinegar or a creamy dairy base.</string>
+
+
+    <string name="spaghetti">Spaghetti (Italian: [spaˈɡetti]) is a long, thin, solid, cylindrical pasta.[1] It is a staple food of traditional Italian cuisine. Like other pasta, spaghetti is made of milled wheat and water and sometimes enriched with vitamins and minerals. Italian spaghetti is typically made from durum wheat semolina.[2] Usually the pasta is white because refined flour is used, but whole wheat flour may be added. Spaghettoni is a thicker form of spaghetti, while capellini is a very thin spaghetti. Originally, spaghetti was notably long, but shorter lengths gained in popularity during the latter half of the 20th century and now it is most commonly available in 25–30 cm (10–12 in) lengths. A variety of pasta dishes are based on it and it is frequently served with tomato sauce or meat or vegetables.
+</string>
+
+
+    <string name="yam_porridge">It is hard to not highlight that Nigerian mothers have a way of making out amazing yam porridge recipe. They have a peculiar and unique way of bringing out the best in any meal One of those special meals that Nigerian mums create magic in a yam porridge recipe. Wow! You need to start imagining the sweet and spicy aroma as you are reading this. So far the yam porridge recipe is followed and prepared, you will definitely enjoy it. It’s a very tasty dish. The beautiful part is that this meal has moved a rank higher from household meal to a celebrity meal. Now, yam porridge is being served in occasions, restaurants, five-star hotels alongside foods like Jollof rice, fried rice and pounded yam etc. Another thing is that you can actually prepare using other varieties like plantain, potato and beans porridge.
+You can also garnish it with vegetables, dairy, beef or seafood. There are lovely methods of preparing it. I will be sharing some yam porridge recipe that you should try. You will like it.</string>
+
+
+
+    <string name="gbegiri">Gbegiri soup is a type of Nigerian soup popularly eaten by the Yoruba tribe of Nigeria. It is made from peeled cooked bean. This beans soup is commonly served at restaurants also known as Buka. It is delicious, velvety and mildly flavoured. Gbegiri or abula as often called is served with ewedu and buka stew.
+GBEGIRI SOUP: I\'m starting this month’s post with my gran’s (Iya Dele) staple, Gbegiri soup popularly called abula in some other part of Yoruba land in Nigeria. My grandma used to sell gbegiri (abula) and I remember people queuing up every evening to buy from her, she usually serves her gbegiri with Tuwo (corn flour). She prided herself in using fresh ingredients; my best part of the soup is the bone marrow and biscuit-bone that she uses.
+Those things are out of this world. I can actually taste the soup in my mouth as I’m typing this longer throat me, I know. Gbegiri is made from beans, delicious, and easy to make but since I moved to the UK, I have found another easiest way of making it.
+Gbegiri involves using peeled beans, cooking it for some minutes and then using a hand broom to smoothen it, well, I am happy to tell that the world has evolved since yesterday. You can now make this delicious soup with unpeeled beans and thanks to the blender or food processor, your hands can rest.
+</string>
+
+
+    <string name="banga">Banga is a type of palm fruit soup from Southern the Niger Delta Nigeria particularly the Itsekiri ethnic group.[7] This cuisine is quite different from "Ofe Akwu" which is a variant found in Igbo culture. The Binis have a soup from palm fruits similar to "Ofe Akwu" in ingredients and manner of preparation.[8][9]
+
+In Nigeria, the delicacy is used to accompany other dishes such as Starch (Usi) for the Urhobo people of Delta State, Nigeria,[10] banku for Ghana and rice for the Igbo tribe.
+
+Banga soup is flavored with beletete, aidan fruit, rohojie, Banga spice leaves called Obenetietien (scent or bitter leaves can be substituted), a stick of oburunbebe, finely chopped onion, ground crayfish, chili pepper or scotch bonnet, and salt.[11] The soup sometimes eaten with a cocoyam (taro) pudding called kwacoco. Banga Soup is mostly prepared using fresh catfish (fresh fish Banga soup) dried/smoked fish or meat.
+
+The soup can also make a delicious dish with the addition of Okra vegetable.[12]
+
+Amiedi, also known as banga soup, is a soup eaten by the Urhobo people of Southern Nigeria. It is made by extracting the liquid of palm kernels. Thereafter, other ingredients like crayfish, meat, fish, pepper and cow tripe are added. It is eaten with eba or usi (starch). (Elaeis guineensis) extract.[13]</string>
+
+
+
+
+    <string name="beans_and_dodo">Hey! If beans and dodo is your favorite food, you are more likely to make it in life. Hahahaha. That was a joke. The food combination isn’t even my favorite but it’s a seemingly perfect combo.
+The smooth blend in the beans and dodo combination is just heavenly. It’s a perfect ride to cloud 9.5 and the only thing that can bring you down from that height is the resulting excessive farting that follows consuming beans. When I say ‘beans’ you think ‘deep’; when I say ‘dodo’ you think ‘even deeper’. That’s how much this food combination has changed people’s perception of life. No one commits suicide after eating beans and dodo. Dodo is fried plantain and beans is beans – in case you’re left wondering.
+I didn’t take out time only to write about food. It’s more. I heard once and after then, severally, that ‘deep calls unto deep’. It’s another way of saying ‘unlike poles attract’ or better still, ‘birds of the same feather flock together’.
+I bet you have heard that ‘no man is an island’. How true. No matter how much you have in your bank accounts or how much you are worth, no matter how much power you possess, you still need people. You cannot do without you, as much as you cannot do without people. People or associations either make you or mar you. No man was, is or would be ultimately ‘self-made’ without the influence of at least five people.</string>
+
+
+    <string name="rice_stew">rice and stew is the staple food of many people. It has been prepared from traditional times using simple methods such as boiling. Over the years, there have been numerous styles of preparing plain rice with stew delicacy. Image: pexels.com Source: UGC Many households incorporate different spices into the stew. But the rice and stew recipe is quite simple and universal. You also need to carefully pick the right type of rice before cooking. There are different kinds of rice such as long grain, basmati, biryani and ordinary rice. Each has a different texture that suits your need.</string>
+    <string name="switch_icon">switch_icon</string>
+
+
 </resources>
