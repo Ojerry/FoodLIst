@@ -6,8 +6,11 @@ import android.widget.TextView
 import org.w3c.dom.Text
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class DetailActivity : AppCompatActivity() {
+    private lateinit var recyclerView: RecyclerView
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_detail)

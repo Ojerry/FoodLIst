@@ -1,6 +1,8 @@
 package com.ojinc.foodlist
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
+import android.icu.lang.UCharacter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -11,12 +13,13 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var newRecyclerView: RecyclerView
     private lateinit var  newArrayList: ArrayList<Foods>
-//    private var isLinearLayoutManager = true
+    private var isLinearLayoutManager = 1
     lateinit var imageId : Array<Int>
     lateinit var heading : Array<String>
     lateinit var price   : Array<String>
@@ -43,8 +46,8 @@ class MainActivity : AppCompatActivity() {
         heading = arrayOf(
             "Amala",
             "Egusi",
-            "Jollof-Rice",
-            "Ogbono-Soup",
+            "Jollof Rice",
+            "Ogbono Soup",
             "Salad",
             "Spaghetti",
             "Yam Porridge",
@@ -84,7 +87,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         newRecyclerView = findViewById(R.id.recyclerVeiw)
-//        newRecyclerView.layoutManager = LinearLayoutManager(this)
+        newRecyclerView.layoutManager = LinearLayoutManager(this)
         newRecyclerView.setHasFixedSize(true)
 
         newArrayList = arrayListOf<Foods>()
@@ -115,45 +118,61 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-//    private fun chooseLayout() {
-//        if (isLinearLayoutManager) {
-//            newRecyclerView.layoutManager = LinearLayoutManager(this)
-//        } else {
-//            newRecyclerView.layoutManager = GridLayoutManager(this, 4)
-//        }
-////        newRecyclerView.adapter = MyAdapter()
-//    }
-//
-//    private fun setItem(menuItem: MenuItem?) {
-//        if (menuItem == null) return
-//
-//        menuItem.icon =
-//                if(isLinearLayoutManager)
+    private fun chooseLayout() {
+        if (isLinearLayoutManager == 1) {
+            newRecyclerView.layoutManager = LinearLayoutManager(this)
+        } else if (isLinearLayoutManager == 2) {
+            newRecyclerView.layoutManager = GridLayoutManager(this, 2)
+        } else {
+            newRecyclerView.layoutManager = StaggeredGridLayoutManager(3, LinearLayoutManager.VERTICAL)
+//        newRecyclerView.adapter = MyAdapter()
+        }
+    }
+
+    private fun setItem(menuItem: MenuItem?) {
+        if (menuItem == null) return
+        fun icon(): Drawable? {
+            if (isLinearLayoutManager == 1){
+                return ContextCompat.getDrawable(this, R.drawable.ic_list_view)
+            } else if(isLinearLayoutManager == 2){
+             return   ContextCompat.getDrawable(this, R.drawable.ic_grid_view)
+            } else {
+                return ContextCompat.getDrawable(this, R.drawable.ic_staggered_view)
+            }
+        }
+        menuItem.icon = icon()
+//                if(isLinearLayoutManager == 1) {
 //                    ContextCompat.getDrawable(this, R.drawable.ic_list_view)
-//        else {
+//                } else {
 //                ContextCompat.getDrawable(this, R.drawable.ic_grid_view)
 //        }
-//    }
-//
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        menuInflater.inflate(R.menu.layout_menu, menu)
-//
-//        val layoutButton = menu?.findItem(R.id.action_switch)
-////        setIcon(layoutButton)
-//        return true
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        return when(item.itemId) {
-//            R.id.action_switch -> {
-//                isLinearLayoutManager = !isLinearLayoutManager
-//
-//                chooseLayout()
-////                setIcon(item)
-//
-//                return true
-//            }
-//            else -> super.onOptionsItemSelected(item)
-//        }
-//    }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.layout_menu, menu)
+
+        val layoutButton = menu?.findItem(R.id.action_switch)
+        setItem(layoutButton)
+        return true
+    }
+    fun switch(): Int {
+        isLinearLayoutManager++
+        if (isLinearLayoutManager == 4){
+            isLinearLayoutManager = 1
+        }
+        return isLinearLayoutManager
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            R.id.action_switch -> {
+                isLinearLayoutManager = switch()
+
+                chooseLayout()
+                setItem(item)
+
+                return true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
 }
