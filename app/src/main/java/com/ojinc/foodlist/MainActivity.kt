@@ -124,7 +124,7 @@ class MainActivity : AppCompatActivity() {
         } else if (isLinearLayoutManager == 2) {
             newRecyclerView.layoutManager = GridLayoutManager(this, 2)
         } else {
-            newRecyclerView.layoutManager = StaggeredGridLayoutManager(3, LinearLayoutManager.VERTICAL)
+            newRecyclerView.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
 //        newRecyclerView.adapter = MyAdapter()
         }
     }
