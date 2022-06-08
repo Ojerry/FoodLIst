@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
 
@@ -32,6 +33,14 @@ class MyAdapter(private val foodList : ArrayList<Foods>) : RecyclerView.Adapter<
         holder.foodImage.setImageResource(currentItem.foodImage)
         holder.tvHeading.text = currentItem.heading
         holder.tvPrice.text = currentItem.price
+
+//        holder.itemView.setOnClickListener {
+//            fun onClick(v: View) {
+//                val activity = v!!.context as AppCompatActivity
+//            }
+//        }
+
+
     }
 
     override fun getItemCount(): Int {

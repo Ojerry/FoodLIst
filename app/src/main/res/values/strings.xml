@@ -64,6 +64,8 @@ I bet you have heard that ‘no man is an island’. How true. No matter how muc
 
     <string name="rice_stew">rice and stew is the staple food of many people. It has been prepared from traditional times using simple methods such as boiling. Over the years, there have been numerous styles of preparing plain rice with stew delicacy. Image: pexels.com Source: UGC Many households incorporate different spices into the stew. But the rice and stew recipe is quite simple and universal. You also need to carefully pick the right type of rice before cooking. There are different kinds of rice such as long grain, basmati, biryani and ordinary rice. Each has a different texture that suits your need.</string>
     <string name="switch_icon">switch_icon</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

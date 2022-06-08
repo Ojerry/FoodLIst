@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.AdapterView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
@@ -24,6 +25,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var heading : Array<String>
     lateinit var price   : Array<String>
     lateinit var details : Array<String>
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -107,13 +110,21 @@ class MainActivity : AppCompatActivity() {
         adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
 //                Toast.makeText(this@MainActivity, "You clicked on Item number $position", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this@MainActivity, DetailActivity::class.java)
+                val intent = Intent(this@MainActivity, DetailFragment::class.java)
                 intent.putExtra("heading",newArrayList[position].heading)
                 intent.putExtra("imageId",newArrayList[position].foodImage)
                 intent.putExtra("details",details[position])
                 startActivity(intent)
 
+
+
             }
+
+//            fun onClick(v: View?){
+//                val activity = v!!.context as AppCompatActivity
+//                val detailFragment = DetailFragment()
+//                activity.supportFragmentManager.beginTransaction().replace(R.id.rec, DetailFragment).addToBackStack(null).commit()
+//            }
 
         })
     }
@@ -175,4 +186,13 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+//    private fun replaceFragment(fragment: Fragment, title: String) {
+//
+//        val fragmentManager = supportFragmentManager
+//        val fragmentTransaction = fragmentManager.beginTransaction()
+//        fragmentTransaction.replace(R.id.frameLayout, fragment)
+//        fragmentTransaction.commit()
+//
+//    }
 }
