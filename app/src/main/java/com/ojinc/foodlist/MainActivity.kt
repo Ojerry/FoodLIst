@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import androidx.fragment.app.Fragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -105,18 +106,31 @@ class MainActivity : AppCompatActivity() {
             newArrayList.add(foods)
         }
 
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        val mFragment = DetailFragment()
+//        fragmentTransaction.replace(R.id.frameLayout, fragment)
+//        fragmentTransaction.commit()
+
+
         var adapter = MyAdapter(newArrayList)
         newRecyclerView.adapter = adapter
         adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
 //                Toast.makeText(this@MainActivity, "You clicked on Item number $position", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this@MainActivity, DetailFragment::class.java)
-                intent.putExtra("heading",newArrayList[position].heading)
-                intent.putExtra("imageId",newArrayList[position].foodImage)
-                intent.putExtra("details",details[position])
-                startActivity(intent)
+//                val intent = Intent(this@MainActivity, DetailFragment::class.java)
+//                intent.putExtra("heading",newArrayList[position].heading)
+//                intent.putExtra("imageId",newArrayList[position].foodImage)
+//                intent.putExtra("details",details[position])
+//                startActivity(intent)
 
-
+                val mBundle = Bundle()
+                mBundle.putString("heading", newArrayList[position].heading)
+                mBundle.putInt("imageId", newArrayList[position].foodImage)
+                mBundle.putString("imageId", details[position])
+                mFragment.arguments = mBundle
+                fragmentTransaction.show(Fragment())
+//                fragmentTransaction.add(R.id.fragmentContainer,mFragment).commit()
 
             }
 
@@ -187,12 +201,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-//    private fun replaceFragment(fragment: Fragment, title: String) {
-//
-//        val fragmentManager = supportFragmentManager
-//        val fragmentTransaction = fragmentManager.beginTransaction()
+    private fun replaceFragment(fragment: Fragment, title: String) {
+
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
 //        fragmentTransaction.replace(R.id.frameLayout, fragment)
-//        fragmentTransaction.commit()
-//
-//    }
+        fragmentTransaction.commit()
+
+    }
 }

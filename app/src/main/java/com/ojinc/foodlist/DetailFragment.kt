@@ -10,50 +10,35 @@ import android.widget.ImageView
 import android.widget.TextView
 
 class DetailFragment : Fragment() {
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-    }
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+    private lateinit var headingFoods : TextView
+    private lateinit var mainDetails : TextView
+    private lateinit var foodImage : ImageView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
+        val view : View =  inflater.inflate(R.layout.fragment_detail, container, false)
 
+        headingFoods = view.findViewById<View>(R.id.heading) as TextView
+        mainDetails = view.findViewById<View>(R.id.details) as TextView
+        foodImage = view.findViewById<View>(R.id.food_image) as ImageView
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detail, container, false)
+
+//        val bundle = arguments
+        val bundle : Bundle?= arguments
+        val heading = bundle!!.getString("heading")
+        val imageId = bundle.getInt("imageId")
+        val details = bundle.getString("details")
+
+        headingFoods.text = heading
+        mainDetails.text = details
+        foodImage.setImageResource(imageId)
+
+        return view
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-    }
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//
+//    }
 
-    override fun onStart() {
-        super.onStart()
-    }
-
-    override fun onResume() {
-        super.onResume()
-    }
-
-    override fun onPause() {
-        super.onPause()
-    }
-
-    override fun onStop() {
-        super.onStop()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-    }
 }
