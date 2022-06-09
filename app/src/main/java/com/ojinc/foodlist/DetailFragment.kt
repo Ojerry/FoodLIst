@@ -16,6 +16,7 @@ class DetailFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
+
         val view : View =  inflater.inflate(R.layout.fragment_detail, container, false)
 
         headingFoods = view.findViewById<View>(R.id.heading) as TextView
@@ -23,8 +24,8 @@ class DetailFragment : Fragment() {
         foodImage = view.findViewById<View>(R.id.food_image) as ImageView
         // Inflate the layout for this fragment
 
-//        val bundle = arguments
-        val bundle : Bundle?= arguments
+        val bundle = arguments
+//        val bundle : Bundle?= arguments
         val heading = bundle!!.getString("heading")
         val imageId = bundle.getInt("imageId")
         val details = bundle.getString("details")

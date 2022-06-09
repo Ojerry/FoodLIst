@@ -109,36 +109,35 @@ class MainActivity : AppCompatActivity() {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         val mFragment = DetailFragment()
-//        fragmentTransaction.replace(R.id.frameLayout, fragment)
-//        fragmentTransaction.commit()
-
 
         var adapter = MyAdapter(newArrayList)
         newRecyclerView.adapter = adapter
         adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-//                Toast.makeText(this@MainActivity, "You clicked on Item number $position", Toast.LENGTH_SHORT).show()
 //                val intent = Intent(this@MainActivity, DetailFragment::class.java)
 //                intent.putExtra("heading",newArrayList[position].heading)
 //                intent.putExtra("imageId",newArrayList[position].foodImage)
 //                intent.putExtra("details",details[position])
 //                startActivity(intent)
 
+                fragmentManager.findFragmentByTag(DetailFragment::class.java.simpleName)
                 val mBundle = Bundle()
                 mBundle.putString("heading", newArrayList[position].heading)
                 mBundle.putInt("imageId", newArrayList[position].foodImage)
-                mBundle.putString("imageId", details[position])
+                mBundle.putString("details", details[position])
                 mFragment.arguments = mBundle
-                fragmentTransaction.show(Fragment())
+                fragmentTransaction.add(R.id.fragmentContainer, mFragment, DetailFragment::class.java.simpleName).commit()
+//                fragmentTransaction.replace(R.id.fragmentContainer, mFragment).addToBackStack(null).commit()
+//                fragmentTransaction.replace(R.id.fragmentContainer, mFragment).commit()
+                val view : View = findViewById(R.id.recyclerVeiw)
+                view.visibility = View.GONE
+
+            //                fragmentTransaction.show(DetailFragment())
 //                fragmentTransaction.add(R.id.fragmentContainer,mFragment).commit()
+//                fragmentTransaction.replace(R.id.recyclerVeiw,DetailFragment()).commit()
 
             }
 
-//            fun onClick(v: View?){
-//                val activity = v!!.context as AppCompatActivity
-//                val detailFragment = DetailFragment()
-//                activity.supportFragmentManager.beginTransaction().replace(R.id.rec, DetailFragment).addToBackStack(null).commit()
-//            }
 
         })
     }
@@ -199,14 +198,5 @@ class MainActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
-    }
-
-    private fun replaceFragment(fragment: Fragment, title: String) {
-
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-//        fragmentTransaction.replace(R.id.frameLayout, fragment)
-        fragmentTransaction.commit()
-
     }
 }
