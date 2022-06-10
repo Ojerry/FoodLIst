@@ -146,9 +146,9 @@ class MainActivity : AppCompatActivity() {
             view.visibility = View.VISIBLE
 //                fragmentTransaction.remove(DetailFragment()).commit()
         }
-//        else{
-//            super.onBackPressed()
-//        }
+        else{
+            super.onBackPressed()
+        }
     }
 
 
