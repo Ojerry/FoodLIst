@@ -1,21 +1,17 @@
 package com.ojinc.foodlist
 
-import android.content.Intent
 import android.graphics.drawable.Drawable
-import android.icu.lang.UCharacter
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.AdapterView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import androidx.fragment.app.Fragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -106,10 +102,6 @@ class MainActivity : AppCompatActivity() {
             newArrayList.add(foods)
         }
 
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        val mFragment = DetailFragment()
-
         var adapter = MyAdapter(newArrayList)
         newRecyclerView.adapter = adapter
         adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
@@ -119,6 +111,9 @@ class MainActivity : AppCompatActivity() {
 //                intent.putExtra("imageId",newArrayList[position].foodImage)
 //                intent.putExtra("details",details[position])
 //                startActivity(intent)
+                val fragmentManager = supportFragmentManager
+                val fragmentTransaction = fragmentManager.beginTransaction()
+                val mFragment = DetailFragment()
 
                 fragmentManager.findFragmentByTag(DetailFragment::class.java.simpleName)
                 val mBundle = Bundle()
@@ -126,21 +121,36 @@ class MainActivity : AppCompatActivity() {
                 mBundle.putInt("imageId", newArrayList[position].foodImage)
                 mBundle.putString("details", details[position])
                 mFragment.arguments = mBundle
-                fragmentTransaction.add(R.id.fragmentContainer, mFragment, DetailFragment::class.java.simpleName).commit()
+                fragmentTransaction.add(R.id.fragmentContainer, mFragment, DetailFragment::class.java.simpleName).addToBackStack(null).commitAllowingStateLoss()
 //                fragmentTransaction.replace(R.id.fragmentContainer, mFragment).addToBackStack(null).commit()
 //                fragmentTransaction.replace(R.id.fragmentContainer, mFragment).commit()
                 val view : View = findViewById(R.id.recyclerVeiw)
                 view.visibility = View.GONE
-
-            //                fragmentTransaction.show(DetailFragment())
-//                fragmentTransaction.add(R.id.fragmentContainer,mFragment).commit()
-//                fragmentTransaction.replace(R.id.recyclerVeiw,DetailFragment()).commit()
-
             }
-
-
         })
     }
+
+    override fun onBackPressed()
+    {
+        val fragmentManager = supportFragmentManager
+//        val fragmentTransaction = fragmentManager.beginTransaction()
+//        val mFragment = DetailFragment()
+        val currentFragment =this@MainActivity.supportFragmentManager.findFragmentById(R.id.fragmentContainer)
+        if(currentFragment is DetailFragment)
+        {
+//            Toast.makeText(this, "There", Toast.LENGTH_SHORT).show()
+
+            fragmentManager.popBackStack()
+
+            val view : View = findViewById(R.id.recyclerVeiw)
+            view.visibility = View.VISIBLE
+//                fragmentTransaction.remove(DetailFragment()).commit()
+        }
+//        else{
+//            super.onBackPressed()
+//        }
+    }
+
 
     private fun chooseLayout() {
         if (isLinearLayoutManager == 1) {
